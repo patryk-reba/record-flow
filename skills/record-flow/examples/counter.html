@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>record-flow fixture</title>
+    <style>
+      body { margin: 0; font: 17px/1.4 system-ui, sans-serif; background: #f6f3ee; color: #1d1b18; }
+      main { min-height: 100vh; display: flex; flex-direction: column; gap: 16px; padding: 48px 20px; box-sizing: border-box; }
+      h1 { margin: 0; font-size: 28px; }
+      #count { font-size: 64px; font-weight: 700; }
+      button { font: inherit; padding: 14px 18px; border-radius: 14px; border: 0; background: #1d1b18; color: #fff; }
+      input { font: inherit; padding: 12px 14px; border-radius: 12px; border: 1px solid #c9c2b8; }
+      #hint { opacity: 0; transition: opacity .2s; }
+      #hold:active + #hint, #hint.on { opacity: 1; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Counter</h1>
+      <div id="count">0</div>
+      <button id="inc">Add one</button>
+      <input id="name" placeholder="Your name" />
+      <button id="hold">Hold me</button>
+      <p id="hint">Held!</p>
+    </main>
+    <script>
+      let n = 0;
+      inc.onclick = () => (count.textContent = ++n);
+      let t;
+      hold.onpointerdown = () => (t = setTimeout(() => hint.classList.add("on"), 500));
+      hold.onpointerup = hold.onpointercancel = () => clearTimeout(t);
+    </script>
+  </body>
+</html>

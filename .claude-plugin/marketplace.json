@@ -1,0 +1,14 @@
+{
+  "name": "record-flow",
+  "description": "record-flow: agent-driven UI flow recordings that are verified before delivery.",
+  "owner": {
+    "name": "Patryk Reba"
+  },
+  "plugins": [
+    {
+      "name": "record-flow",
+      "source": "./",
+      "description": "Record an app's UI flow to a crisp, verified MP4 and hand it to the user."
+    }
+  ]
+}

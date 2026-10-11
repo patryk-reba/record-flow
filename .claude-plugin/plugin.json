@@ -1,0 +1,10 @@
+{
+  "name": "record-flow",
+  "version": "0.1.0",
+  "description": "Record an app's UI flow (browser at phone size, or the iOS simulator) to a crisp, verified MP4 and hand it to the user.",
+  "author": { "name": "Patryk Reba" },
+  "homepage": "https://github.com/patryk-reba/record-flow",
+  "repository": "https://github.com/patryk-reba/record-flow",
+  "license": "MIT",
+  "keywords": ["video", "recording", "playwright", "demo", "screen-record", "ios-simulator", "qa"]
+}

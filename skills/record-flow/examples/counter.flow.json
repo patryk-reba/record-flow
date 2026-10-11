@@ -1,0 +1,13 @@
+{
+  "name": "counter",
+  "url": "counter.html",
+  "device": "iphone",
+  "colorScheme": "light",
+  "ready": "#inc",
+  "steps": [
+    { "tap": "#inc", "count": 3, "label": "add three" },
+    { "type": "Ada", "into": "#name", "label": "enter name" },
+    { "hold": "#hold", "ms": 1200, "expect": "#hint.on", "label": "hold button" }
+  ],
+  "tailMs": 1200
+}
